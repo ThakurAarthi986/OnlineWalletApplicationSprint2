@@ -1,0 +1,66 @@
+      <div class="f">
+        <br>
+        <div class="row">
+          <div class="col-md-7">
+          <img class="center" src="assets\images\wallet.png" width="550" height="400"></div>
+                <div class="col-md-14"></div>
+            <div class="col-md-4">
+                <br><br>
+                <div class="card">
+                    <img class="center" src="assets\images\user.png" width="50" height="150">
+                    <div class="card-body">
+                        <div class="container">
+                            <h3 class=" card=title text-center b ">Login</h3>
+                            <br>
+                            <div class="card">
+                                <div class="container">
+                                    <div class="container ">
+                                        <br>
+                                        <form #userForm="ngForm" (ngSubmit)='onSubmit(userForm.value)'>
+      
+                                          <div class="form-group">
+                                              <label><span class="req"></span>User Id </label>
+                                        <input required minlength="1" type="number" #user_IdRef='ngModel' name="user_Id" ngModel class="form-control">
+                                              <div *ngIf='user_IdRef.errors && user_IdRef.touched' class="alert alert-danger">
+                                                  <div [hidden]='!user_IdRef.errors.required'> Provide UserId </div>
+                                              </div>
+                                          </div>
+                                      
+                                          <div class="form-group">
+                                              <label><span class="req"></span>Password </label>
+                                        <input required minlength="5" type="password" #passwordRef='ngModel' name="password" ngModel class="form-control">
+                                              <div *ngIf='passwordRef.errors  && passwordRef.touched' class="alert alert-danger">
+                                                  <div [hidden]='!passwordRef.errors.required'>Provide Password</div>
+                                              </div>
+                                          </div>
+                                          
+                                    
+                                      
+                                      <input  [disabled]="userForm.invalid" type="submit" value="Login" class="btn btn-primary col align-self-center">
+                                    
+                                    
+                                      
+                                    <div class="col"></div>
+                                  
+                                
+                            
+                                  <p align="center">Do you have an Account? <a href="create-account"  class="roterlink navbar-brand">SIGN UP</a></p>
+                              
+                                          
+                                          
+                                            <br>
+                                        </form>
+      
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+        </div>
+        <div class="col-md-1 "></div>
+      </div><br><br><br>
+      </div>
+        
+    

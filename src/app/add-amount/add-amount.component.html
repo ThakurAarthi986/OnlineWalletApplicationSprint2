@@ -1,0 +1,17 @@
+
+    <div class="col-lg-4 m-auto d-block">
+    <br><br>
+    <h3 class="text-center"><u>Add Amount</u></h3>
+    <div>
+        <form #customerForm="ngForm">
+        
+<div class="form-group">
+    <label for="accBal">Enter Amount to Add</label>
+    <input type="text"   id="accBal" required [(ngModel)]="accBal" name="accountBalance"  class="form-control">
+</div>
+
+ <button type="submit" class="btn btn-success" (click)="addAmount()">Submit</button>
+</form>
+</div>
+<h3 style="color: green;">{{msg}}</h3>
+</div>
